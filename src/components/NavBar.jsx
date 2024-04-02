@@ -24,9 +24,19 @@ const NavBar = () => {
                 <div className="flex-none">
                     <ul className="menu menu-horizontal px-1">
                         <li>{user && <span>{user.email}</span>}</li>
-                        <li><Link to='/register'>Register</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
-                        <li><Link to='/order'>Order</Link></li>
+                        {
+                            !user && <>
+                                <li><Link to='/register'>Register</Link></li>
+                                <li><Link to='/login'>Login</Link></li>
+
+                            </>
+                        }
+                        {
+                            user && <>
+                                <li><Link to='/order'>Order</Link></li>
+                            </>
+                        }
+
                         <li onClick={handleLogout}>Log Out</li>
                     </ul>
                 </div>
