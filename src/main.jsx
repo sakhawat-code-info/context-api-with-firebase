@@ -8,6 +8,8 @@ import './index.css'
 import ErrorPage from './pages/ErrorPage';
 import Root from './LayOut/Root';
 import Home from './pages/Home';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 
 
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage></RegisterPage>,
+      },
+      {
+        path: "/login",
+        element: <LoginPage></LoginPage>,
       },
     ],
   },
